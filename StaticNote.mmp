@@ -1,0 +1,34 @@
+/*********************************************************************
+ * StaticNote.mmp
+ *
+ * 
+ *********************************************************************/
+
+TARGET            StaticNote.pyd
+TARGETTYPE        dll
+TARGETPATH        \system\libs
+
+
+SYSTEMINCLUDE     \epoc32\include
+SYSTEMINCLUDE     \epoc32\include\libc
+SYSTEMINCLUDE     \epoc32\include\python
+
+USERINCLUDE       .
+SOURCEPATH		  .
+START RESOURCE	StaticNote.rss
+HEADER
+TARGETPATH resource\apps
+END
+
+LIBRARY           python222.lib 
+LIBRARY			euser.lib apparc.lib cone.lib eikcore.lib avkon.lib
+LIBRARY			commonengine.lib efsrv.lib estor.lib eikcoctl.lib eikdlg.lib 
+LIBRARY			eikctl.lib bafl.lib fbscli.lib aknnotify.lib aknicon.lib
+LIBRARY			etext.lib gdi.lib egul.lib insock.lib apgrfx.lib 
+LIBRARY			ecom.lib InetProtUtil.lib http.lib esock.lib charconv.lib
+LIBRARY        aknskins.lib aknskinsrv.lib aknswallpaperutils.lib
+LIBRARY        ws32.lib apmime.lib eikcdlg.lib eiksrv.lib etel3rdparty.lib
+
+SOURCE            main.cpp OpenUrl.cpp
+
+CAPABILITY	  	  NetworkServices LocalServices ReadUserData MultimediaDD WriteUserData Location UserEnvironment PowerMgmt ReadDeviceData WriteDeviceData TrustedUI ProtServ NetworkControl SwEvent SurroundingsDD CommDD DiskAdmin

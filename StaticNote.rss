@@ -1,0 +1,86 @@
+NAME STNO
+#include <avkon.rsg>
+#include <avkon.rh>
+#include <eikon.rh>
+#include <appinfo.rh>
+#include <eikon.rsg>
+#include <avkon.hrh>
+RESOURCE RSS_SIGNATURE { }
+RESOURCE DIALOG r_message_note_err
+    {
+    flags = EAknErrorNoteFlags;
+    buttons = R_AVKON_SOFTKEYS_OK_EMPTY;
+    items =
+        {
+        DLG_LINE
+            {
+            type = EAknCtNote;
+            id = 1;
+            control = AVKON_NOTE 
+                { 
+                layout = EGeneralLayout;
+                animation = R_QGN_NOTE_ERROR_ANIM;
+                };
+            }
+        };
+    }
+RESOURCE DIALOG r_message_note_info
+    {
+    flags = EAknInformationNoteFlags;
+    buttons = R_AVKON_SOFTKEYS_OK_EMPTY;
+    items =
+        {
+        DLG_LINE
+            {
+            type = EAknCtNote;
+            id = 1;
+            control = AVKON_NOTE 
+                { 
+                layout = EGeneralLayout;
+                animation = R_QGN_NOTE_INFO_ANIM;
+                };
+            }
+        };
+    }
+RESOURCE DIALOG r_message_note_conf
+    {
+    flags = EAknConfirmationNoteFlags;
+    buttons = R_AVKON_SOFTKEYS_OK_EMPTY;
+    items =
+        {
+        DLG_LINE
+            {
+            type = EAknCtNote;
+            id = 1;
+            control = AVKON_NOTE 
+                { 
+                layout = EGeneralLayout;
+                animation = R_QGN_NOTE_OK_ANIM;
+                };
+            }
+        };
+    }
+RESOURCE DIALOG r_link_query_dialog
+	{
+	flags = EEikDialogFlagNoDrag |EEikDialogFlagCbaButtons |EEikDialogFlagWait; 
+	buttons = R_AVKON_SOFTKEYS_OK_EMPTY;
+	items=
+		{
+		DLG_LINE 
+			{
+			type = EAknCtPopupHeadingPane; 
+			id = EAknMessageQueryHeaderId;
+			control = AVKON_HEADING
+				{
+				};
+			},
+		DLG_LINE
+			{
+			type = EAknCtMessageQuery;
+			id = EAknMessageQueryContentId;
+			control = AVKON_MESSAGE_QUERY
+				{
+				};
+			}
+		};
+	}

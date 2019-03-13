@@ -1,0 +1,4 @@
+The source of PyS60 1 module StaticNote.
+This module is written by a Chinese coder. However, I cannot find any articles or thread about this module on Chinese Internet.
+
+*Note: uncomment the 3 code line to restore the "link" feature in StaticNote.linknote().*
